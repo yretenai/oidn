@@ -196,7 +196,7 @@ OIDN_NAMESPACE_BEGIN
     if (hipPointerGetAttributes(&attrib, ptr) != hipSuccess)
       return Storage::Undefined;
 
-    switch (attrib.memoryType)
+    switch (attrib.type)
     {
     case hipMemoryTypeHost:
       return Storage::Host;
